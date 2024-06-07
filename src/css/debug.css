@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.debug-red {
+	background-color: #ff000020;
+}
+.debug-green {
+	background-color: #00ff0020;
+}
+.debug-blue {
+	background-color: #0000ff20;
+}

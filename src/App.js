@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Dialog from "./components/Dialog";
+import StarRating from "./components/StarRating";
+// import "./css/debug.css";
 
 function App() {
+	const ratingMessages = ["Disgusting", "Awful", "Alright", "Good!", "Amazing!!!"]
+	const [isDialogActive, setDialogActive] = useState(false);
+
+
+	const toggleDialog = () => {
+		setDialogActive(!isDialogActive);
+	}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className="page-content">
+				<StarRating starCount={5} ratingMessages={ratingMessages}/>
+			</div>
+			<button className="open-dialog" onClick={toggleDialog}>Open Dialog</button>
+			<Dialog enabled={isDialogActive} onBackgroundClick={toggleDialog}/>
+    </main>
   );
 }
 
