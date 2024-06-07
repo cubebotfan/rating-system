@@ -4,7 +4,7 @@ import StarRating from "./components/StarRating";
 // import "./css/debug.css";
 
 function App() {
-	const ratingMessages = ["Disgusting", "Awful", "Alright", "Good!", "Amazing!!!"]
+	const ratingMessages = ["Unacceptable", "Awful", "Alright", "Good!", "Amazing!!!"]
 	const [isDialogActive, setDialogActive] = useState(false);
 
 
